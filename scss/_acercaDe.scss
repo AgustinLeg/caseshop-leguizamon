@@ -9,6 +9,21 @@ main{
             justify-content: center;
             flex-direction: column;
             align-items: center;
+            p{
+                font-size: 1.3rem;
+                font-weight: 700;
+            }
+            ol{
+                li{
+                    font-size: 1.1rem;
+                    margin:30px;
+                    ul{
+                        li{
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
         }
         .tiendas{
             flex-direction: column;
