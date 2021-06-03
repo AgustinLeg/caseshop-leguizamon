@@ -1,0 +1,76 @@
+@import "variables";
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    .container{
+        padding:0 !important;
+        div{
+            min-width: 170px;
+            text-align: start !important;
+            color: #fff;
+            margin: 30px 0;
+            font-size: 1.1rem;
+        }
+    }
+
+    h3{
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    a{
+        color: $colorWhite;
+        text-decoration: none;
+        font-size: 1.1rem;
+        &:hover{
+            color:$colorAzul;
+        }
+    }
+    ul{
+        li{
+            font-size:1.1rem;
+        }
+    }
+
+    .copyright{
+        display: block;
+        background: $colorWhite;
+        color: #000;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 12px;
+    }
+    @media screen and (min-width: 768px){
+        &{
+            h3{
+                font-size: 1.2rem;
+            }
+            
+            .copyright{
+                font-size: 16px;
+            }
+        } 
+        
+    }
+
+@media screen and (min-width: 1200px){
+    &{
+        .container {
+            flex-direction: row;
+            justify-content: space-around;
+
+            div{
+                font-size: .8rem;
+                text-align: start;
+            }
+        }
+        h3{
+            font-size: 1.3rem;
+        }
+        .copyright{
+            font-size: 1rem;
+        }
+    }   
+}
+}

@@ -1,0 +1,141 @@
+.producto__img{
+    position:relative;
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+    img{
+        width: 100%;
+    }
+    
+}
+
+.producto__titulo{
+    font-size:1.1rem;
+    font-weight: 600;
+    color: $colorGray;
+    margin-top: 10px;
+}
+
+.producto__precio{
+    color: #999997;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+
+
+.producto__boton{
+    position: absolute;
+    width: 100%;
+    border-radius: 0;
+    bottom: 0;
+    padding: 25px;
+    left: 0;
+    background: $colorLightBlue;
+    transition: all .5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    outline: none;
+    border:none;
+    a{
+    @extend .links;
+        color:#fff;
+        font-size: .9rem;
+        font-weight: 700;
+        border:2px solid #fff;
+        border-radius: 25px;
+        padding: 10px 15px;
+    }
+}
+
+.boton{
+    background: transparent;
+    padding: 10px 30px;
+    border: 2px solid $colorAzul;
+    border-radius: 25px;
+    transition:background .3s;
+    margin-top: 25px;
+    color: $colorAzul;
+    &:hover{
+        background: $colorAzul;
+        color: #fff;
+        a{
+            color: #fff;
+        }
+    }
+    a{
+        @extend .links;
+        color: $colorAzul;    
+        font-weight: 700;
+    }
+
+}
+
+.boton--120{
+    width:120px;
+}
+
+.lista{
+    padding: 0;
+
+}
+.lista__item{
+    list-style: none;
+    margin: 10px 0;
+}
+.lista__titulo{
+    font-weight: 700;
+    list-style: none;
+    margin: 10px 0;
+    color: $colorGray;
+}
+
+.lista__link{
+    color: $colorWhite;
+    text-decoration: none;
+    &:hover{
+        color:$colorAzul;
+    }
+}
+
+.lista__link--negro{
+    color:#000;
+}
+
+.tiendas{
+    height:100%;
+}
+
+
+.titulo{
+    width: 100%;
+    font-family: $textFont;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 55px;
+    padding: 50px 0;
+    margin-bottom: 100px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.titulo--simple{
+    font-family: $textFont;
+    font-weight: 700;
+    background: transparent;
+    color: $colorGray;
+    text-transform:capitalize;
+    padding: 0;
+
+}
+
+
+.imagenThumb{
+    width: 100%;
+    max-width:35px;
+}
+
+.links{
+    text-decoration: none;
+    font-size: 1rem;
+}

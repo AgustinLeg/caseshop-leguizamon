@@ -1,0 +1,21 @@
+@import "variables";
+*{
+    margin: 0;
+    padding: 0;
+    body{
+        position: relative;
+        font-family: $textFont;
+        padding-bottom: 800px;
+        main{
+            padding-bottom: 50px;
+        }
+    }
+    @media screen and (min-width: 768px){
+        body{
+            padding-bottom: 300px;
+        }
+        main{
+            padding-top: 50px;
+        }
+    }       
+}

@@ -1,0 +1,38 @@
+main {
+    .container{
+        .contacto{
+            .row{
+                input[type="text"]{
+                    border: none;
+                    border-bottom: 1px solid #000;
+                    padding:20px;
+                    width: 100%;
+                    margin: 50px 0;
+                    outline: none;
+                }
+                textarea{
+                    border: none;
+                    border-bottom: 1px solid #000;
+                    padding:20px;
+                    width: 100%;
+                    margin: 50px 0;
+                    outline: none;
+                }
+                @media screen and (min-width: 1200px){
+                    &{
+                        input[type="text"]{
+                            width: 50%;
+                        }
+                        textarea{
+                            width: 50%;
+                        }
+                    }
+                }
+                .btn-group{
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+            }
+        }
+    }
+}

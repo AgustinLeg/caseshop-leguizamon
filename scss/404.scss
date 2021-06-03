@@ -1,0 +1,42 @@
+.error-padding{
+    padding-bottom: 0;
+    .error{
+        margin-top: 75px;
+        text-align: center;
+        .error-titulo{
+            color:#fff;
+            opacity: .8;
+            font-size: 3rem;
+        }
+        @media screen and (min-width: 768px) {
+            &{
+                margin-top: 50px;
+                .error-titulo{
+                    font-size: 5rem;
+                }
+            }
+        }
+        img{
+            width: 100%;
+            max-width: 350px;
+            margin-top: -20px;
+        }
+        span{
+            color:#fff;
+            margin-top: -15px;
+        }
+        p{
+            color:#fff;
+        }
+        button{
+            margin-top: 40px;
+            a{
+                color:#fff;
+                text-decoration: none;
+                font-weight: 900;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+    

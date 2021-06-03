@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import "index";
+@import "header";
+@import "footer";
+@import "bem";
+@import "tienda";
+@import "acercaDe";
+@import "contacto";
+@import "operadores";
+@import "404";
+
+
+
+
+$primary:  #457b9d;
+$secondary: #1d3557;
+$danger: #e63946;
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+$custom-colors: (
+    "blanco": #f1faee,
+    "celeste": #a8dadc,
+);
+    
+$theme-colors: map-merge($theme-colors, $custom-colors);
+@debug $theme-colors;
+    

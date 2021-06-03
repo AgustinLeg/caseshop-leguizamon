@@ -1,0 +1,35 @@
+//each
+@each $redesIcon in facebook,instagram,correo{
+    .#{$redesIcon}-icono{
+        width:30px;
+        height:30px;
+        cursor: pointer;
+        background-image: url(../images/#{$redesIcon}-icono.svg);
+        background-repeat: no-repeat;
+    };
+};
+
+// Map
+$redes :(
+    facebook:#3b5998,
+    instagram:#c13584,
+    pinterest:#e60023,
+);
+
+@each $red, $color in $redes {
+    .#{$red}-link{
+        transition:all .1s linear;
+    }
+    .#{$red}-link:hover{
+        background:$color;
+        font-weight: 700;
+        color:#fff;
+        padding:5px;
+    }
+}
+
+// Mixin
+@mixin maxSizes($width, $height){
+    max-height:$height;
+    max-width:$width;
+}

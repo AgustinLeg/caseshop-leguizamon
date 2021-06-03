@@ -1,0 +1,75 @@
+@import "variables";
+@import "operadores";
+main{
+    .container{
+        .container__productos{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-gap: 20px;
+            width:100%;
+            .producto{
+                @include maxSizes(250px,250px);
+                height:100%;
+                width:100%;
+                justify-self: center;
+                transition: transform .8s ease;
+                text-align:center;
+                margin: 0 0 150px 0;
+                position: relative;
+                &:hover {
+                    .producto__boton{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    span{
+                        bottom:0;
+                        opacity: 1;
+                        visibility:visible;
+                        cursor:pointer;
+                    }
+                }
+
+                span{
+                    background: rgba(255,255,255,.6);
+                    color: $colorGray;
+                    font-size: .8rem;
+                    position: absolute;
+                    left:0;
+                    bottom: -100px;
+                    padding:15px ;
+                    width: 100%;
+                    transition:all .4s;
+                    visibility:hidden;
+                }
+               
+            }
+            @media screen and (min-width: 768px){
+                &{
+                    grid-template-columns: repeat(2,1fr);
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 768px){
+        &{
+            padding-top: 50px;
+        }
+    }
+    @media screen and (min-width: 1200px){    
+        &{
+            .container{
+                .container__productos{
+                    grid-template-columns: repeat(4,1fr);
+                }
+            }
+            #listaProductos{
+                .container{
+                    .container__productos{
+                        grid-template-columns: repeat(3,1fr);
+                    }
+                }
+            }
+           
+        }
+    }
+}
