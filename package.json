@@ -1,7 +1,7 @@
 {
   "name": "caseshop",
   "version": "1.0.0",
-  "description": "desafio 11 - caseshop - leguizamon",
+  "description": "Proyecto final de la tineda online CaseShop",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
