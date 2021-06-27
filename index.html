@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="images/logo.svg" sizes="any">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>CaseShop</title>
 </head>
 <body>
@@ -21,9 +22,25 @@
                   </h1>
                 <div class="btn-contenedor d-flex">
                     <div class="cart">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                        </svg>
+                        <span class="count">1</span>
+                        <i class="fas fa-shopping-bag"></i>
+                        <div class="cart__productos">
+                            <div class="producto">
+                                <img src="images/funda-iphone-amarillo.png" class="d-block w-100" alt="Hombre sosteniendo su celular con una funda negra">
+                                <div class="producto__info">
+                                    <p class="producto__titulo">Funda Celeste</p>
+                                    <p class="producto__precio">$100</p>
+                                </div>
+                                <p class="cantidad">x <span>1</span></p>
+                                <a href="#" id="eliminar-btn"><i class="far fa-trash-alt"></i></a>
+                            </div>
+                            <div class="cart__total">
+                                <p class="subtotal">SubTotal: <span class="precio">$100</span></p>
+                            </div>
+                            <div class="btn-finalizar-compra">
+                                <button class="btn btn-primary"><a href="#">Finalizar Compra</a></button>
+                            </div>
+                        </div>
                     </div>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -60,7 +77,7 @@
     </header>
     <main>
         <section id="banners-container">
-            <div class="container py-5">
+            <div class="container pt-5">
                 <div class="row">
                     <div class="col-md-8">
                         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -85,16 +102,25 @@
                             </button>
                           </div>
                     </div>
-                    <div class="col-md-4 d-flex justify-content-between flex-column">
+                    <div class="mini-banners col-12 col-md-4 d-flex justify-content-between flex-md-column">
                         <img src="images/banner-sec-colores.jpg" alt="6 fundas de colores" class="img-fluid">
                         <img src="images/banner-sec-oficial-iphone.jpg" alt="6 fundas de colores" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row banner__publicidad">
+                    <div class="col-md-3 banner__texto">
+                        <span>No olvides en seguirnos en todas nuestras </span>
+                        <button class="btn btn-primary"><a href="">redes</a></button>
+                    </div>
+                    <div class="col-md-9 banner__img">
+                        <img src="images/banner-instagram.jpg" alt="">
                     </div>
                 </div>
             </div>
         </section>
         <section id="productosTop">
             <div class="container d-flex flex-column align-items-center">
-                <h2 class="titulo bg-primary">Lo mas vendido</h2>
+                <h2 class="titulo">Lo mas vendido</h2>
                 <div class="container__productos">
                     <div class="producto">
                         <img class="producto__img" class="producto__img" src="images/funda-iphone-celeste.jpg" alt="Funda para iphone color celeste">
@@ -154,7 +180,7 @@
             </div>
         </div>
         <div class="copyright">
-            <p>© Copyright 2021</p>
+            <p>© CaseShop Copyright 2021</p>
         </div>
     </footer>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

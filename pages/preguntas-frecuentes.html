@@ -6,67 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="images/logo.svg" sizes="any">
     <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Preguntas Frecuentes - CaseShop</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light ">
-            <div class="container">
-                <h1 class="logo">
-                    <a href="../index.html" title="CaseShop" >
-                      <img src="../images/logo.svg" alt="Logo CaseShop" />
-                    </a>
-                  </h1>
-                <div class="btn-contenedor d-flex">
-                    <div class="cart">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                        </svg>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container">
+            <h1 class="logo">
+                <a href="../index.html" title="CaseShop" >
+                  <img src="../images/logo.svg" alt="Logo CaseShop" />
+                </a>
+              </h1>
+            <div class="btn-contenedor d-flex">
+              <div class="cart">
+                <span class="count">1</span>
+                <i class="fas fa-shopping-bag"></i>
+                <div class="cart__productos">
+                    <div class="producto">
+                        <img src="../images/funda-iphone-amarillo.png" class="d-block w-100" alt="Hombre sosteniendo su celular con una funda negra">
+                        <div class="producto__info">
+                            <p class="producto__titulo">Funda Celeste</p>
+                            <p class="producto__precio">$100</p>
+                        </div>
+                        <p class="cantidad">x <span>1</span></p>
+                        <a href="#" id="eliminar-btn"><i class="far fa-trash-alt"></i></a>
                     </div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
+                    <div class="cart__total">
+                        <p class="subtotal">SubTotal: <span class="precio">$100</span></p>
+                    </div>
+                    <div class="btn-finalizar-compra">
+                        <button class="btn btn-primary"><a href="#">Finalizar Compra</a></button>
+                    </div>
+                  </div>
                 </div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="tienda.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Productos
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="tienda.html">Fundas</a></li>
-                            <li><a class="dropdown-item" href="#">Cargadores</a></li>
-                            <li><a class="dropdown-item" href="#">Extras</a></li>
-                        </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="como-comprar.html">Como Comprar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
-                        </li>
-                    </ul>
-                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
-        </nav>
-    </header>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="tienda.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Productos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="tienda.html">Fundas</a></li>
+                        <li><a class="dropdown-item" href="#">Cargadores</a></li>
+                        <li><a class="dropdown-item" href="#">Extras</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="como-comprar.html">Como Comprar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
     <main>
         <section id="preguntas">
             <div class="container mb-5">
                 <h2 class="titulo bg-primary">Preguntas Frecuentes</h2>
                 <div class="row">
-                  <div class="col-12 col-md-3 d-flex flex-md-column align-items-center justify-content-around my-5">
-                    <div class="instagram-icono"></div>
-                    <div class="facebook-icono"></div>
-                    <div class="correo-icono"></div>
-                  </div>
-                  <div class="col-12 col-md-9">
+                  <div class="col-12">
                     <div class="accordion" id="accordionExample">
                       <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
@@ -139,10 +151,10 @@
           <div class="visita">
               <h3>Visita</h3>
               <ul class="lista">
-                  <li class="lista__item"><a href="tienda.html">Tienda</a></li>
-                  <li class="lista__item"><a href="como-comprar.html">Como Comprar</a></li>
-                  <li class="lista__item"><a href="contacto.html">Contacto</a></li>
-                  <li class="lista__item"><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                  <li class="lista__item"><a href="pages/tienda.html">Tienda</a></li>
+                  <li class="lista__item"><a href="pages/como-comprar.html">Como Comprar</a></li>
+                  <li class="lista__item"><a href="pages/contacto.html">Contacto</a></li>
+                  <li class="lista__item"><a href="pages/preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
               </ul>
           </div>
           <div class="redes">
@@ -155,7 +167,7 @@
           </div>
       </div>
       <div class="copyright">
-          <p>© Copyright 2021</p>
+          <p>© CaseShop Copyright 2021</p>
       </div>
   </footer>
   <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

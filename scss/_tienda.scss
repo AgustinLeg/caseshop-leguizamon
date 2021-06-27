@@ -1,7 +1,27 @@
 @import "variables";
 @import "operadores";
 main{
+    #productosTop{
+        .container{
+            .titulo{
+                color:$colorAzul;
+                margin:0 0 25px 0;
+            }
+            .producto{
+                .producto__titulo{
+                    margin-bottom:0;
+                }
+                .producto__boton{
+                    bottom:-75px;
+                }
+            }
+        }
+    }
     .container{
+        .titulo{
+            color:#fff;
+            padding:25px 0;
+        }
         .container__productos{
             display: grid;
             grid-template-columns: repeat(1,1fr);
@@ -20,8 +40,12 @@ main{
                     .producto__boton{
                         opacity: 1;
                         visibility: visible;
+                        a{
+                            color:#fff;
+                        }
                     }
                     span{
+                        color:$colorGray;
                         bottom:0;
                         opacity: 1;
                         visibility:visible;

@@ -8,6 +8,61 @@
         padding-bottom: 800px;
         main{
             padding-bottom: 50px;
+            .mini-banners{
+                flex-direction: row;
+                img{
+                    margin:10px 0;
+                    width:48%;
+                }
+                @media screen and (max-width:360px){
+                    &{
+                        flex-direction: column;
+                        img{
+                            margin:10px 0;
+                            width:100%;
+                        }
+                    }
+                }
+            }
+            #banners-container{
+                .container{
+                    .banner__publicidad{
+                        margin-top: 50px;
+                        margin-bottom:75px;
+                        .banner__texto{
+                            padding:30px 5px;
+                            margin:10px 0;
+                            background:$colorRojo;
+                            font-family: $textFont;
+                            font-weight: 700;
+                            font-size: 1rem;
+                            text-align: center;
+                            line-height: 1.8rem;
+                            color:#fff;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            .btn{
+                                width:50%;
+                                margin-top: 10px;
+                                border-radius: 30px;
+                                background: transparent;
+                                border: 2px solid $colorWhite;
+                                a{
+                                    color:$colorWhite;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                        .banner__img{
+                            img{
+                                width:100%;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     @media screen and (min-width: 768px){
@@ -16,6 +71,27 @@
         }
         main{
             padding-top: 50px;
+            .mini-banners{
+                img{
+                    margin:0 !important;
+                    width: 100% !important;
+                }
+            }
+            #banners-container{
+                .container{
+                    .banner__publicidad{
+                        .banner__texto{
+                            margin:0 !important;
+                        }
+                        .banner__img{
+                            img{
+                                max-height:300px;
+                                height:100%;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }       
 }
