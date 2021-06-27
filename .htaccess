@@ -2,3 +2,4 @@
 # HTID:17882811: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
 php_value display_errors 1
 # DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:17882811:
+ErrorDocument 404 https://leguizamon-caseshop.000webhostapp.com/pages/404.html
