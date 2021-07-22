@@ -1,6 +1,7 @@
 const admin = "agustin";
+let productosContenedor = [];
 
-function preguntar() {
+function cuentaRegistrada() {
   let usuario = prompt("Tienes una cuenta registrada? \n si - no");
   switch (usuario) {
     case "si":
@@ -11,12 +12,12 @@ function preguntar() {
       break;
 
     default:
-      preguntar();
+      cuentaRegistrada();
       break;
   }
 }
 
-class Productos {
+class Producto{
   constructor(id, nombre, precio) {
     this.id = id;
     this.nombre = nombre;
@@ -49,22 +50,48 @@ class Productos {
 
 function cuentaAdmin() {
   let cuentaUsuario = prompt("Nombre de usuario:");
-  if (cuentaUsuario.toLowerCase() === admin) {
-    const producto1 = new Productos(1, "Funda Roja", 1200);
-    const producto2 = new Productos(2, "Funda Azul", 1500);
-    producto1.reponer();
-    producto2.reponer();
-    alert(`Productos agregados Correcatamente: \n ${producto1.nombre} $${producto1.precio} cantidad: ${producto1.cantidad} \n ${producto2.nombre} $${producto2.precio} cantidad: ${producto2.cantidad}`);
-    let contarIva = prompt('Queres sumarle el IVA?')
-    if(contarIva.toLowerCase() === 'si'){
-        producto1.sumarIVA();
-        producto2.sumarIVA();
-        alert(`Productos actualizados: \n ${producto1.nombre} $${producto1.precio} \n ${producto2.nombre} $${producto2.precio} \n CON IVA`);
+  if (cuentaUsuario.toLowerCase() === admin) {   
+    while(prompt('Quiere agregar productos \n ESC para salir') !== 'ESC'){
+      let idProducto = Number(prompt('id'));
+      let existe = productosContenedor.some(producto => producto.id === idProducto )
+      if(!existe){
+        productosContenedor.push(new Producto(idProducto,prompt('nombre'),prompt('precio')));
+      }else{
+        alert(`ERROR \n YA EXISTE UN PRODUCTO CON EL ID: ${idProducto}`)
+      }
     }
-    producto1.vender();
+    let alertaProductos = 'Productos agregados: \n'
+   
+
+    // ---------- DESAFIO EXTRA ----------------
+    let avisoOrdenar = prompt('Queres ver los productos ordenados alfabeticamente? \n SI - NO')
+    if(avisoOrdenar.toLowerCase() === 'si'){
+      let productosOrdenados = productosContenedor.sort((a,b) => {
+        const nombreA = a.nombre.toLowerCase();
+        const nombreB = b.nombre.toLowerCase();
+        if(nombreA < nombreB){
+          return -1;
+        }
+        if(nombreA > nombreA){
+          return 1;
+        }
+        return 0;
+      })
+      for(producto of productosOrdenados){
+        alertaProductos += `${producto.nombre} precio: $${producto.precio} ID:${producto.id} \n`
+      }
+      alert(alertaProductos)
+    }else{
+      for(producto of productosContenedor){
+        alertaProductos += `Nº ${producto.id} nombre: ${producto.nombre} precio: $${producto.precio} \n`
+      }
+      alert(alertaProductos);
+    }
+    // -----------------------------------------------
+    
   } else {
     alert(`Bienvenido ${cuentaUsuario}`);
   }
 }
 
-preguntar();
+cuentaRegistrada();
