@@ -42,16 +42,30 @@ header{
                     .cart__productos{
                         position: absolute;
                         width: 280px;
+                        min-height: 200px;
                         left:-150px;
                         background:#fff;
                         padding:10px;
                         visibility: hidden;
                         box-shadow: 0px 0px 20px  rgba(0, 0, 0, .3);
+                        cursor: default;
+                        #estadoCarrito{
+                            span{
+                                border:1px solid $colorAzul;
+                                border-radius: 25px;
+                                text-align:center;
+                                color:$colorAzul;
+                                font-size: 1rem;
+                                padding: 5px 10px;
+                                margin-top:50px;
+                            }
+                        }
                         .btn-finalizar-compra{
                             width:100%;
                             display:flex;
                             justify-content: center;
                             .btn{
+                                border-radius: 25px;
                                 a{
                                     color:#fff;
                                     text-decoration: none;
@@ -64,34 +78,33 @@ header{
                             flex-direction: column;
                             justify-content:center;
                             align-items:center;
-                            .subtotal{
+                            .total{
                                 width:100%;
                                 text-align: center;
                                 padding:15px;
                                 border-top:1px solid #c4c4c4;
                                 border-bottom:1px solid #c4c4c4;
-                                color:$colorGray;
-                                font-size: .9rem;
+                                font-size: 1.3rem;
                                 margin-top: 20px;
                                 font-weight: 700;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                color: $colorAzul;
                                 .precio{
                                     margin-left: 5px;
-                                    color:#000;
+                                    color: $colorAzul;
                                     font-weight: 900;
                                 }
                             }
                         }
                         .producto{
                             display: flex;
-                            justify-content: flex-start;
+                            justify-content: space-between;
                             align-items: center;
                             flex-direction: row;
-                            .cantidad{
-                                color:$colorGray;
-                                font-size: .8rem;
-                                margin-left: 10px;
-                            }
-                            #eliminar-btn{
+                            margin:10px 0;
+                            .eliminar-btn{
                                 font-size: .8rem;
                                 color:$colorRojo;
                                 margin-left: 20px;
@@ -103,7 +116,11 @@ header{
                             .producto__info{
                                 display: flex;
                                 flex-direction: column;
+                                justify-content:flex-start;
+                                align-items:flex-start;
                                 margin-left: 5px;
+                                min-width:55%;
+                                max-width:55%;
                                 p{
                                     margin:0;
                                 }
@@ -114,6 +131,36 @@ header{
                                 .producto__precio{
                                     
                                     font-size: .8rem;
+                                }
+                                #btnCantidad{
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    justify-content:center;
+                                    padding:2px;
+                                    border:1px solid $colorAzul;
+                                    border-radius: 25px;
+                                    button{
+                                        background:none;
+                                        outline: none;
+                                        font-size: 14px;
+                                        cursor:pointer;
+                                        background:$colorAzul;
+                                        color:#fff;
+                                        padding:0;
+                                        width:20px;
+                                        height:20px;
+                                        border-radius:50%;
+                                        &:hover{
+                                            background:$colorLightBlue;
+                                            color:#fff;
+                                        }
+                                    }
+                                    .cantidad{
+                                        color:$colorGray;
+                                        font-size: .8rem;
+                                        margin:0px 5px;
+                                    }
                                 }
                             }
                         }
