@@ -20,23 +20,13 @@
                   </h1>
                 <div class="btn-contenedor d-flex">
                     <div class="cart">
-                        <span class="count">1</span>
-                        <i class="fas fa-shopping-bag"></i>
+                        <i class="fas fa-shopping-bag"><div class="count"></div></i>
+                        <div class="modal-cart"></div>
                         <div class="cart__productos">
-                            <div class="producto">
-                                <img src="../images/funda-iphone-amarillo.png" class="d-block w-100" alt="Hombre sosteniendo su celular con una funda negra">
-                                <div class="producto__info">
-                                    <p class="producto__titulo">Funda Celeste</p>
-                                    <p class="producto__precio">$100</p>
-                                </div>
-                                <p class="cantidad">x <span>1</span></p>
-                                <a href="#" id="eliminar-btn"><i class="far fa-trash-alt"></i></a>
+                            <h3>Tu Carrito</h3>
+                            <div id="productosCarrito">
                             </div>
-                            <div class="cart__total">
-                                <p class="subtotal">SubTotal: <span class="precio">$100</span></p>
-                            </div>
-                            <div class="btn-finalizar-compra">
-                                <button class="btn btn-primary"><a href="#">Finalizar Compra</a></button>
+                            <div id="estadoCarrito">
                             </div>
                         </div>
                     </div>
@@ -77,6 +67,13 @@
         <section id="listaProductos">
             <div class="container">
                 <h2 class="titulo bg-primary">Tienda</h2>
+                <select class="form-select" aria-label="Ordenar por" id="ordenarProductos">
+                    <option selected>Ordenar por</option>
+                    <option value="precio-ascending">Precio: Menor a Mayor</option>
+                    <option value="precio-desscending">Precio: Mayor a Menor</option>
+                    <option value="alpha-ascending">A - Z</option>
+                    <option value="alpha-desscending">Z - A</option>
+                  </select>
                 <div class="container__productos">
                     <div class="producto">
                         <div class="producto__img">
@@ -84,8 +81,8 @@
                             <span>ver mas</span>
                         </div>
                         <p class="producto__titulo">Funda Celeste</p>
-                        <p class="producto__precio">$100</p>
-                        <button class="boton"><a href="#">Añadir al carrito</a></button>
+                        <p class="producto__precio">$2000</p>
+                        <button class="boton"><a href="#" class="btn-agregar" data-id="1">Añadir al carrito</a></button>
                     </div>
                     <div class="producto">
                         <div class="producto__img">
@@ -93,8 +90,8 @@
                             <span>ver mas</span>
                         </div>
                         <p class="producto__titulo">Funda Verde</p>
-                        <p class="producto__precio">$100</p>
-                        <button class="boton"><a href="#">Añadir al carrito</a></button>
+                        <p class="producto__precio">$2300</p>
+                        <button class="boton"><a href="#" class="btn-agregar" data-id="5">Añadir al carrito</a></button>
                     </div>
                     <div class="producto">
                         <div class="producto__img">
@@ -102,8 +99,8 @@
                             <span>ver mas</span>
                         </div>
                         <p class="producto__titulo">Funda Azul</p>
-                        <p class="producto__precio">$100</p>
-                        <button class="boton"><a href="#">Añadir al carrito</a></button>
+                        <p class="producto__precio">$2500</p>
+                        <button class="boton"><a href="#" class="btn-agregar" data-id="6">Añadir al carrito</a></button>
                     </div>
                     <div class="producto">
                         <div class="producto__img">
@@ -111,8 +108,8 @@
                             <span>ver mas</span>
                         </div>
                         <p class="producto__titulo">Funda Amarilla</p>
-                        <p class="producto__precio">$100</p>
-                        <button class="boton"><a href="#">Añadir al carrito</a></button>
+                        <p class="producto__precio">$2000</p>
+                        <button class="boton"><a href="#" class="btn-agregar" data-id="4">Añadir al carrito</a></button>
                     </div>
                     <div class="producto">
                         <div class="producto__img">
@@ -120,8 +117,8 @@
                             <span>ver mas</span>
                         </div>
                         <p class="producto__titulo">Funda Rosa</p>
-                        <p class="producto__precio">$100</p>
-                        <button class="boton"><a href="#">Añadir al carrito</a></button>
+                        <p class="producto__precio">$2300</p>
+                        <button class="boton"><a href="#" class="btn-agregar" data-id="2">Añadir al carrito</a></button>
                     </div>
                     <div class="producto">
                         <div class="producto__img">
@@ -129,8 +126,8 @@
                             <span>ver mas</span>
                         </div>
                         <p class="producto__titulo">Funda Naranja</p>
-                        <p class="producto__precio">$100</p>
-                        <button class="boton"><a href="#">Añadir al carrito</a></button>
+                        <p class="producto__precio">$2500</p>
+                        <button class="boton"><a href="#" class="btn-agregar">Añadir al carrito</a></button>
                     </div>
                 </div>
             </div>
@@ -168,5 +165,6 @@
         </div>
     </footer>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../js/app.js" type="module"></script>
 </body>
 </html>

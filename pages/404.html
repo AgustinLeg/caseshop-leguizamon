@@ -20,23 +20,13 @@
                   </h1>
                 <div class="btn-contenedor d-flex">
                     <div class="cart">
-                        <span class="count">1</span>
-                        <i class="fas fa-shopping-bag"></i>
+                        <i class="fas fa-shopping-bag"><div class="count"></div></i>
+                        <div class="modal-cart"></div>
                         <div class="cart__productos">
-                            <div class="producto">
-                                <img src="../images/funda-iphone-amarillo.png" class="d-block w-100" alt="Hombre sosteniendo su celular con una funda negra">
-                                <div class="producto__info">
-                                    <p class="producto__titulo">Funda Celeste</p>
-                                    <p class="producto__precio">$100</p>
-                                </div>
-                                <p class="cantidad">x <span>1</span></p>
-                                <a href="#" id="eliminar-btn"><i class="far fa-trash-alt"></i></a>
+                            <h3>Tu Carrito</h3>
+                            <div id="productosCarrito">
                             </div>
-                            <div class="cart__total">
-                                <p class="subtotal">SubTotal: <span class="precio">$100</span></p>
-                            </div>
-                            <div class="btn-finalizar-compra">
-                                <button class="btn btn-primary"><a href="#">Finalizar Compra</a></button>
+                            <div id="estadoCarrito">
                             </div>
                         </div>
                     </div>
@@ -87,5 +77,6 @@
         </section>
     </main>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../js/app.js" type="module"></script>
 </body>
 </html>
