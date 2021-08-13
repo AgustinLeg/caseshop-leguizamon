@@ -1,3 +1,5 @@
+import UI from './classes/UI.js';
+const ui = new UI();
 import {
   agregarProducto,
   borrarProductoCarrito,
@@ -6,17 +8,21 @@ import {
   leerLocalStorage,
   toggleCarrito,
 } from "./funciones.js";
+import { Productos } from "./Productos.js";
 
-import { listaProductos, productosCarrito, btnCarrito } from "./selectores.js";
+import { listaProductos, productosCarrito} from "./selectores.js";
+
+const banner = document.querySelector('.banner-carga')
+
+
 
 iniciarApp();
 function iniciarApp() {
   document.addEventListener("DOMContentLoaded", () => {
-    btnCarrito.addEventListener("click", toggleCarrito);
-
+    $('.cart').click(toggleCarrito);
     leerLocalStorage();
-
-    if (listaProductos) {
+    
+    if(listaProductos){
       listaProductos.addEventListener("click", agregarProducto);
     }
 
@@ -29,3 +35,17 @@ function iniciarApp() {
   
   });
 }
+
+$(document).ready(function() {
+    if($('#productosTop').length > 0){
+      for (let i = 0 ; i < 4 ; i++){
+        ui.productosTopUI(Productos[i])
+      }
+    }else{
+      for (const producto  of Productos){
+        ui.productosUI(producto);
+      }
+    }
+
+  
+})

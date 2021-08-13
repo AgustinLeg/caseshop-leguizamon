@@ -3,6 +3,34 @@ import Carrito from './Carrito.js'
 const carrito = new Carrito();
 
 class UI{
+
+    productosTopUI(producto){
+        $('#productosTop .container__productos').append(`
+        <div class="producto">
+            <div class="producto__img">
+                <img class="producto__img" src="${producto.imgURL}" alt="Funda para iphone color ${producto.nombre}">
+            </div>
+            <p class="producto__titulo">${producto.nombre}</p>
+            <p class="producto__precio">$${producto.precio}</p>
+            <button class="producto__boton"><a href="#" class="btn-agregar" data-id="${producto.id}">agregar al carrito</a></button>
+        </div>
+        `)
+
+    }
+    productosUI(producto){
+        $('#listaProductos .container__productos').append(`
+        <div class="producto">
+            <div class="producto__img">
+                <img class="producto__img" src="${producto.imgURL}" alt="Funda para iphone color ${producto.nombre}">
+            </div>
+            <p class="producto__titulo">${producto.nombre}</p>
+            <p class="producto__precio">$${producto.precio}</p>
+            <button class="producto__boton"><a href="#" class="btn-agregar" data-id="${producto.id}">agregar al carrito</a></button>
+        </div>
+        `)
+
+    }
+    
     // Borrar elementos del contenedor
     limpiarHTML(contenedor){
         while(contenedor.firstChild){

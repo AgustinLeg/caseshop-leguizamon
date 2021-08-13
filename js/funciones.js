@@ -134,10 +134,12 @@ export function restarCantidad(e){
 
 // Cargar productos del localStorage
 export function leerLocalStorage(){
-    productosContenedor = JSON.parse(localStorage.getItem('carrito'));
-    ui.cantidadCarrito(productosContenedor)
-    if(productosContenedor.length > 0){
+    if('carrito' in localStorage){
+        productosContenedor = JSON.parse(localStorage.getItem('carrito'));
         ui.imprimirCarrito(productosContenedor);
+    }else{
+        productosContenedor=[];
+        ui.cantidadCarrito([])
     }
 }
 
