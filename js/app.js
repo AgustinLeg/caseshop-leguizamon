@@ -6,7 +6,7 @@ import {
   agregarCantidad,
   restarCantidad,
   leerLocalStorage,
-  toggleCarrito,
+  ordenarProductos
 } from "./funciones.js";
 import { Productos } from "./Productos.js";
 
@@ -19,9 +19,8 @@ const banner = document.querySelector('.banner-carga')
 iniciarApp();
 function iniciarApp() {
   document.addEventListener("DOMContentLoaded", () => {
-    $('.cart').click(toggleCarrito);
     leerLocalStorage();
-    
+    ordenarProductos();
     if(listaProductos){
       listaProductos.addEventListener("click", agregarProducto);
     }
@@ -39,13 +38,16 @@ function iniciarApp() {
 $(document).ready(function() {
     if($('#productosTop').length > 0){
       for (let i = 0 ; i < 4 ; i++){
-        ui.productosTopUI(Productos[i])
+        ui.productosUI(Productos[i],'#productosTop .container__productos')
       }
     }else{
       for (const producto  of Productos){
-        ui.productosUI(producto);
+        ui.productosUI(producto,'#listaProductos .container__productos');
       }
     }
+})
 
-  
+
+window.addEventListener('load', function() {
+  console.log('listo')
 })

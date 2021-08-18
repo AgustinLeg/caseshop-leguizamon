@@ -4,8 +4,8 @@ const carrito = new Carrito();
 
 class UI{
 
-    productosTopUI(producto){
-        $('#productosTop .container__productos').append(`
+    productosUI(producto,contenedor){
+        $(contenedor).append(`
         <div class="producto">
             <div class="producto__img">
                 <img class="producto__img" src="${producto.imgURL}" alt="Funda para iphone color ${producto.nombre}">
@@ -15,22 +15,7 @@ class UI{
             <button class="producto__boton"><a href="#" class="btn-agregar" data-id="${producto.id}">agregar al carrito</a></button>
         </div>
         `)
-
     }
-    productosUI(producto){
-        $('#listaProductos .container__productos').append(`
-        <div class="producto">
-            <div class="producto__img">
-                <img class="producto__img" src="${producto.imgURL}" alt="Funda para iphone color ${producto.nombre}">
-            </div>
-            <p class="producto__titulo">${producto.nombre}</p>
-            <p class="producto__precio">$${producto.precio}</p>
-            <button class="producto__boton"><a href="#" class="btn-agregar" data-id="${producto.id}">agregar al carrito</a></button>
-        </div>
-        `)
-
-    }
-    
     // Borrar elementos del contenedor
     limpiarHTML(contenedor){
         while(contenedor.firstChild){
@@ -55,6 +40,7 @@ class UI{
             const productoDiv = document.createElement('div');
             productoDiv.className="producto";
             productoDiv.innerHTML=`
+                <div class="spinner">${this.spinnerCarga()}</div>
                 <img src="../${producto.imgURL}" class="d-block w-100" alt="Hombre sosteniendo su celular con una funda negra">
                 <div class="producto__info">
                     <p class="producto__titulo">${producto.nombre}</p>
@@ -121,6 +107,10 @@ class UI{
                 <div class="sk-chase-dot"></div>
             </div>
         `
+    }
+
+    btnListo(){
+        console.log('listo')
     }
     
 }

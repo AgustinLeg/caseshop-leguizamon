@@ -7,19 +7,45 @@ class Producto {
         this.cantidad = 1;
     }
 
-    ordenar(productos){
+    static ordenar(productos,orden){
+
+        let nombreA;
+        let nombreB;
         // Ordenar alfabeticamente
-        productos.sort((a, b) => {
-            const nombreA = a.nombre.toLowerCase();
-            const nombreB = b.nombre.toLowerCase();
-            if (nombreA < nombreB) {
+        const productosOrdenados = productos.sort((a, b) => {
+            switch (orden) {
+                case 'alpha-ascending':
+                    nombreA = b.nombre.toLowerCase();
+                    nombreB = a.nombre.toLowerCase();
+                    break;
+                case 'alpha-desscending':
+                    nombreA = a.nombre.toLowerCase();
+                    nombreB = b.nombre.toLowerCase();
+                    break;
+                case 'precio-desscending':
+                    nombreA = a.precio;
+                    nombreB = b.precio;
+                    break;
+                case 'precio-ascending':
+                    nombreA = b.precio;
+                    nombreB = a.precio;
+                    break;
+            
+                default:
+                    nombreA = '';
+                    nombreB = '';
+                    break;
+            }  
+            if (nombreA > nombreB) {
                 return -1;
             }
-            if (nombreA > nombreA) {
+            if (nombreA < nombreA) {
                 return 1;
             }
             return 0;
         });
+
+        return productosOrdenados;
     }
 }
 
