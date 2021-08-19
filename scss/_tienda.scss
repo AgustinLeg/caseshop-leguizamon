@@ -22,6 +22,37 @@ main{
             color:#fff;
             padding:25px 0;
         }
+        #filtros{
+            position: absolute;
+            z-index: 1;
+            background: #fff;
+            h3{
+                color: $colorAzul;
+                margin: 10px 0;
+                font-size: 1.5rem;
+                font-weight: 900;
+            }
+            .btn{
+                min-width: 90px;
+                max-width: 90px;
+            }
+            .color{
+                .ref-color{
+                    width: 10px;
+                    height: 10px;
+                    background-color: #FF0000;
+                    display: inline-block;
+                    margin-right: 5px;
+                    border-radius: 50%;           
+                }
+                .celeste{background:lightblue}
+                .verde{background:green}
+                .azul{background:blue}
+                .rosa{background:pink}
+                .amarillo{background:yellow}
+                .naranja{background:orange}
+            }
+        }
         .container__productos{
             display: grid;
             grid-template-columns: repeat(1,1fr);
@@ -77,7 +108,14 @@ main{
     @media screen and (min-width: 768px){
         &{
             padding-top: 50px;
+            .container{
+                #filtros{
+                    display: flex;
+                    position: relative;
+                }
+            }
         }
+        
     }
     @media screen and (min-width: 1200px){    
         &{
@@ -88,6 +126,7 @@ main{
             }
             #listaProductos{
                 .container{
+                    
                     .container__productos{
                         grid-template-columns: repeat(3,1fr);
                     }

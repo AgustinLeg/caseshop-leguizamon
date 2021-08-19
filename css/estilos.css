@@ -255,7 +255,7 @@ header {
           box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
   position: fixed;
   background: #fff;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
 }
@@ -892,6 +892,57 @@ main .container .titulo {
   padding: 25px 0;
 }
 
+main .container #filtros {
+  position: absolute;
+  z-index: 1;
+  background: #fff;
+}
+
+main .container #filtros h3, main .container #filtros .h3 {
+  color: #1b4793;
+  margin: 10px 0;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+main .container #filtros .btn {
+  min-width: 90px;
+  max-width: 90px;
+}
+
+main .container #filtros .color .ref-color {
+  width: 10px;
+  height: 10px;
+  background-color: #FF0000;
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+main .container #filtros .color .celeste {
+  background: lightblue;
+}
+
+main .container #filtros .color .verde {
+  background: green;
+}
+
+main .container #filtros .color .azul {
+  background: blue;
+}
+
+main .container #filtros .color .rosa {
+  background: pink;
+}
+
+main .container #filtros .color .amarillo {
+  background: yellow;
+}
+
+main .container #filtros .color .naranja {
+  background: orange;
+}
+
 main .container .container__productos {
   display: -ms-grid;
   display: grid;
@@ -958,6 +1009,12 @@ main .container .container__productos .producto span {
 @media screen and (min-width: 768px) {
   main {
     padding-top: 50px;
+  }
+  main .container #filtros {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
   }
 }
 

@@ -74,13 +74,84 @@
         <section id="listaProductos">
             <div class="container">
                 <h2 class="titulo bg-primary">Tienda</h2>
-                <select class="form-select" aria-label="Ordenar por" id="ordenarProductos">
-                    <option selected>Ordenar por</option>
-                    <option value="precio-ascending">Precio: Menor a Mayor</option>
-                    <option value="precio-desscending">Precio: Mayor a Menor</option>
-                    <option value="alpha-ascending">A - Z</option>
-                    <option value="alpha-desscending">Z - A</option>
-                  </select>
+                <div class="row">
+                    <div class="col-8">
+                        <button class="btn btn-primary" id="btnFiltro" type="button"><i class="fas fa-filter"></i> Filtrar</button>
+                        
+                        <div id="filtros">
+                            <div class="col-12 col-md-6">
+                                <div class="categorias">
+                                    <h3>Categorias</h3>
+                                    <input type="radio" class="btn-check" id="btn-categorias-todos" name="categorias" autocomplete="off" value='todos'>
+                                    <label class="btn btn-outline-primary my-2" for="btn-categorias-todos">Todos</label>
+                                    <input type="radio" class="btn-check" id="btn-simple" name="categorias" autocomplete="off" value='simple'>
+                                    <label class="btn btn-outline-primary my-2" for="btn-simple">Simples</label>
+                                    <input type="radio" class="btn-check" id="btn-diseno" name="categorias" autocomplete="off" value="diseno">
+                                    <label class="btn btn-outline-primary my-2" for="btn-diseno">Diseño</label>
+                                </div>
+                                <div class="color">
+                                    <h3>Color</h3>
+                                    <div class="row">
+                                        <div class="col-12 d-flex">
+                                            <input type="radio" class="btn-check" id="color-todos" name="colores" autocomplete="off" value="todos">
+                                            <label class="btn btn-outline-primary my-2" for="color-todos">Todos</label>
+                                        </div>
+                                        <div class="col-12 d-flex">
+                                            <div class="col-6">
+                                                <input type="radio" class="btn-check" id="color-celeste" name="colores" autocomplete="off" value="celeste">
+                                                <label class="btn btn-outline-primary btn-sm my-2" for="color-celeste"><div class="ref-color celeste"></div>Celeste</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="radio" class="btn-check" id="color-verde" name="colores" autocomplete="off" value="verde">
+                                                <label class="btn btn-outline-primary btn-sm my-2" for="color-verde"><div class="ref-color verde"></div>Verde</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex">
+                                            <div class="col-6">
+                                                <input type="radio" class="btn-check" id="color-azul" name="colores" autocomplete="off" value="azul">
+                                                <label class="btn btn-outline-primary btn-sm my-2" for="color-azul"><div class="ref-color azul"></div>Azul</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="radio" class="btn-check" id="color-rosa" name="colores" autocomplete="off" value="rosa">
+                                                <label class="btn btn-outline-primary btn-sm my-2" for="color-rosa"><div class="ref-color rosa"></div>Rosa</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex">
+                                            <div class="col-6">
+                                                <input type="radio" class="btn-check" id="color-amarillo" name="colores" autocomplete="off" value="amarillo">
+                                                <label class="btn btn-outline-primary btn-sm my-2" for="color-amarillo"><div class="ref-color amarillo"></div>Amarillo</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="radio" class="btn-check" id="color-naranja" name="colores" autocomplete="off" value="naranja">
+                                                <label class="btn btn-outline-primary btn-sm my-2" for="color-naranja"><div class="ref-color naranja"></div>Naranja</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 mx-4">
+                                <div class="modelos">
+                                    <h3>Modelos</h3>
+                                    <input type="radio" class="btn-check" id="btn-modelos-todos" name="modelos" autocomplete="off" value="todos">
+                                    <label class="btn btn-outline-primary my-2" for="btn-modelos-todos">Todos</label>
+                                    <input type="radio" class="btn-check" id="btn-iphone" name="modelos" autocomplete="off" value="iphone">
+                                    <label class="btn btn-outline-primary my-2" for="btn-iphone">Iphone</label>
+                                    <input type="radio" class="btn-check" id="btn-samsung" name="modelos" autocomplete="off" value="samsung">
+                                    <label class="btn btn-outline-primary my-2" for="btn-samsung">Samsung</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <select class="form-select form-select-sm" aria-label="Ordenar por" id="ordenarProductos">
+                            <option selected>Mas Vendidos</option>
+                            <option value="precio-ascending">Precio: Menor a Mayor</option>
+                            <option value="precio-desscending">Precio: Mayor a Menor</option>
+                            <option value="alpha-ascending">A - Z</option>
+                            <option value="alpha-desscending">Z - A</option>
+                          </select>
+                    </div>
+                </div>
                 <div class="container__productos">
                 </div>
             </div>

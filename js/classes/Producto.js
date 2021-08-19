@@ -1,10 +1,14 @@
 class Producto {
-    constructor(nombre, precio,imgURL, id) {
+    constructor(nombre, precio,imgURL, id, color, categoria, modelo) {
         this.nombre = nombre;
         this.precio = precio;
         this.imgURL = imgURL;
         this.id = id;
         this.cantidad = 1;
+        this.color = color;
+        this.categoria = categoria;
+        this.modelo = modelo;
+        this.filtro = {}
     }
 
     static ordenar(productos,orden){
@@ -46,6 +50,41 @@ class Producto {
         });
 
         return productosOrdenados;
+    }
+
+    filtrar(productos, filtros){
+        this.filtro = filtros;
+        
+        const resultado = productos.filter(producto => {
+            const {categoria} = this.filtro
+                if(categoria === 'todos'){
+                    return producto
+                }else if(categoria){
+                    return producto.categoria === categoria;
+                }
+                return producto;
+        
+        }).filter(producto => {
+            const {color} = this.filtro
+
+                if(color  === 'todos'){
+                    return producto;
+                }else if(color){
+                    return producto.color === color;
+                }
+                return producto;
+        
+        }).filter(producto => {
+            const {modelo} = this.filtro
+                if(modelo === 'todos'){
+                    return producto;
+                }else if(modelo){
+                    return producto.modelo === modelo;
+                }
+                return producto;
+            
+        })
+       return resultado;
     }
 }
 
