@@ -1,5 +1,7 @@
 import UI from "./classes/UI.js";
 import Producto from "./classes/Producto.js";
+import ProductoCustom from "./classes/ProductoCustom.js";
+import { colorContainer, colorDefault} from "./selectores.js";
 
 let productos = [];
 let productosContenedor = [];
@@ -12,6 +14,7 @@ let datosBusqueda={
 const ui = new UI();
 let animacion = false;
 const producto = new Producto();
+const productoCustom = new ProductoCustom();
 
 
 // Cargar productos del localStorage
@@ -219,3 +222,130 @@ export function restarCantidad(e) {
   }
 }
 
+
+/* ======== PRODUCTO CUSTOM ============ */
+
+export function changeColor(){
+  for (let i = 0; i < colorContainer.length; i++){
+    colorContainer[i].style.background = '#'+colorDefault[i];
+  }
+  colorContainer.forEach((color,index) =>{
+    color.addEventListener('click',()=>{
+      productoCustom.setColor(colorDefault[index])
+    })
+  })
+}
+
+
+$("#colorChoice").change(function(){
+  let colorSeleccionado = $(this).val().slice(1)
+  productoCustom.setColor(colorSeleccionado)
+});
+
+
+$('#mensajeFunda').on('input',function() {
+  let texto = `${$(this).val()}`
+  $('#textoFunda').text(texto);
+})
+
+
+
+$('#horizontal').on('input',function() {
+  let left = $(this).val() + 'px'
+  $('#textoFunda').css('left',left)
+})
+$('.rango #vertical').on('input',function() {
+  let top = $(this).val() + 'px'
+  $('#textoFunda').css('top',top)
+})
+
+$("#colorTexto").change(function(){
+  let colorSeleccionado = $(this).val()
+  $('#textoFunda').css('color',colorSeleccionado)
+});
+$("#textoSize").change(function(){
+
+  $('#textoFunda').css('font-size',$(this).val()+'px')
+});
+
+$('#btn-check-design').click(function(){
+  if($("#btn-check-design").prop("checked")){
+    $('.shp34').css('opacity',1);
+    $('.top-content span').text('$3500');
+  }else{
+    $('.shp34').css('opacity',0);
+    $('.top-content span').text('$3000');
+  }
+})
+
+
+function agregarCustom(){
+  const producto = {
+    nombre: $('.top-content h2').text() + ' CUSTOM',
+    precio: $('.top-content span').text().slice(1),
+    imgURL: "images/funda-iphone-verde.png",
+    id: 999,
+    settings:{
+      shp0:$('.shp0').css('fill'),
+      shp1:$('.shp1').css('fill'),
+      shp2:$('.shp2').css('fill'),
+      shp3:$('.shp3').css('stroke'),
+      shp33:$('.shp33').css('stroke'),
+      shp34:$('.shp34').css('stroke'),
+      shp36:$('.shp36').css('fill'),
+      stop:$('#grd22 stop').css('stop-color')
+    }
+  }
+  const {nombre, precio, imgURL, id, settings} = producto
+  productosContenedor.push(new ProductoCustom(nombre, precio, imgURL, id, settings))
+  ui.imprimirCarrito(productosContenedor)
+}
+$('#buyCustom').click(agregarCustom)
+
+
+
+var forms = document.querySelectorAll('.formulario-validacion')
+
+Array.prototype.slice.call(forms)
+  .forEach(function (form) {
+    form.addEventListener('submit', function (event) {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+        // return;
+      }else{
+        event.preventDefault();
+        $('#btnFinalizarCompra').html(`Gracias por tu compra`)
+        $('.modal').css({
+          'opacity': 1,
+          'display': 'block',
+        })
+        setTimeout(() => {
+          $('.modal-body').html('Compra finalizada con exito!')
+          setTimeout(() => {
+            $('.modal').css({
+              'opacity': 0,
+              'display': 'none',
+            })
+          },3000)
+        },3000)
+      }
+      form.classList.add('was-validated')
+      
+    
+    }, false)
+  })
+
+
+/* ======== Finalizar Compra ============ */
+export function imprirmirFinalizarCompra(){
+  const finalizarCompra = document.querySelector('.productosFinales #contenedor__productos')
+  let  total =0;
+  if(finalizarCompra){
+    productosContenedor.forEach(producto =>{
+      ui.finalizarCompraUI(producto, finalizarCompra)
+      total +=Number(producto.precio);
+    })
+    $('.productosFinales .total .precio').text(total)
+  }
+}

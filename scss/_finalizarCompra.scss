@@ -1,0 +1,46 @@
+@import "variables";
+
+main{
+    .productosFinales{
+        .titulos{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;              
+            span{
+                font-weight: 700;
+            }
+        }
+        table{
+            width: 100%;
+            border-collapse: separate;
+	        border-spacing: 5px 10px;
+            td{
+                font-size: .8rem;
+            }
+            .td__nombre{
+                font-weight: 700;
+            }
+            .td__imagen{
+                width: 100px;
+            }
+            @media screen and(min-width: 768px){
+                td{
+                    font-size: 1rem;
+                }
+                .td__imagen{
+                    width:150px;
+                }
+            }
+            
+        }
+        .total{
+            font-weight: 900;
+            font-size: 1.2rem;
+            float: right;
+            margin: 50px 0;
+            span{
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

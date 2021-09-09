@@ -16,6 +16,16 @@ class UI{
         </div>
         `)
     }
+    finalizarCompraUI(producto,contenedor){
+        $(contenedor).append(`
+            <tr>
+                <td><img src="../${producto.imgURL}" class="td__imagen" alt="Funda para iphone color ${producto.nombre}"/></td>
+                <td class="td__nombre">${producto.nombre}</td>
+                <td>x <span class="td__cantidad">${producto.cantidad}</span> </td>
+                <td class="td__precio">${producto.precio}</td>
+            </tr>
+        `)
+    }
     // Borrar elementos del contenedor
     limpiarHTML(contenedor){
         while(contenedor.firstChild){
@@ -65,10 +75,10 @@ class UI{
         const estadoCarrito = document.querySelector('#estadoCarrito');
         const vacioDiv = document.createElement('div');
         let urlFinalizarCompra;
-        if(window.location.pathname === '/pages/tienda.html'){
-            urlFinalizarCompra = 'finalizar-compra.html'
+        if(window.location.pathname === '/index.html'){
+            urlFinalizarCompra='./pages/finalizar-compra.html'
         }else{
-            urlFinalizarCompra='pages/finalizar-compra.html'
+            urlFinalizarCompra = './finalizar-compra.html'
         }
         contador.textContent = productos.length
         if(carrito.vacio(productos.length)){
@@ -107,12 +117,7 @@ class UI{
                 <div class="sk-chase-dot"></div>
             </div>
         `
-    }
-
-    btnListo(){
-        console.log('listo')
-    }
-    
+    }  
 }
 
 

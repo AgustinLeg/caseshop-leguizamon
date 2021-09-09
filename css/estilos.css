@@ -276,6 +276,7 @@ header .navbar .container .btn-contenedor .cart {
   cursor: pointer;
   font-size: 1.8rem;
   color: #E63946;
+  background: #FFF;
 }
 
 header .navbar .container .btn-contenedor .cart i {
@@ -502,7 +503,7 @@ header .navbar .container .cart__productos .producto .producto__info .btnCantida
 }
 
 header .navbar .container .cart__productos .producto .producto__info .btnCantidad .cantidad {
-  color: #414141;
+  color: #2c2c2c;
   font-size: .8rem;
   margin: 0px 5px;
 }
@@ -657,7 +658,7 @@ footer .copyright {
 .producto__titulo {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #414141;
+  color: #2c2c2c;
   margin-top: 10px;
 }
 
@@ -765,7 +766,7 @@ footer .copyright {
   font-weight: 700;
   list-style: none;
   margin: 10px 0;
-  color: #414141;
+  color: #2c2c2c;
 }
 
 .lista__link {
@@ -799,7 +800,7 @@ footer .copyright {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   background: transparent;
-  color: #414141;
+  color: #2c2c2c;
   text-transform: capitalize;
   padding: 0;
 }
@@ -978,7 +979,7 @@ main .container .container__productos .producto:hover .producto__boton a {
 }
 
 main .container .container__productos .producto:hover span {
-  color: #414141;
+  color: #2c2c2c;
   bottom: 0;
   opacity: 1;
   visibility: visible;
@@ -987,7 +988,7 @@ main .container .container__productos .producto:hover span {
 
 main .container .container__productos .producto span {
   background: rgba(255, 255, 255, 0.6);
-  color: #414141;
+  color: #2c2c2c;
   font-size: .8rem;
   position: absolute;
   left: 0;
@@ -1027,6 +1028,284 @@ main .container .container__productos .producto span {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
+}
+
+main {
+  font-family: "Poppins", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 50px;
+}
+
+main .shp34 {
+  opacity: 0;
+}
+
+main .custom-phone {
+  position: relative;
+}
+
+main .custom-phone .top-content {
+  position: absolute;
+}
+
+main .custom-phone .top-content h2, main .custom-phone .top-content .h2 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+main .custom-phone .top-content span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #E63946;
+}
+
+main .custom-phone svg {
+  margin-top: 30px;
+  min-width: 300px;
+  max-width: 300px;
+}
+
+main .custom-phone .mensaje {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-width: 300px;
+  max-width: 300px;
+  margin-top: 30px;
+}
+
+main .custom-phone .mensaje .texto-personalizado {
+  width: 100px;
+  height: 170px;
+  -webkit-transform: translate(165px, 88px);
+          transform: translate(165px, 88px);
+  background: transparent;
+  border: 2px dashed #d44949;
+  position: relative;
+  overflow: hidden;
+}
+
+main .custom-phone .mensaje .texto-personalizado p {
+  color: #000;
+  position: absolute;
+  top: 0;
+}
+
+@media screen and (min-width: 600px) {
+  main .custom-phone .top-content h2, main .custom-phone .top-content .h2 {
+    font-size: 2rem;
+  }
+  main .custom-phone .top-content span {
+    font-size: 1.2rem;
+  }
+  main .custom-phone svg {
+    min-width: 400px;
+    max-width: 400px;
+  }
+  main .custom-phone .mensaje {
+    min-width: 400px;
+    max-width: 400px;
+  }
+  main .custom-phone .mensaje .texto-personalizado {
+    width: 130px;
+    height: 218px;
+    -webkit-transform: translate(222px, 120px);
+            transform: translate(222px, 120px);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  main .custom-phone svg {
+    min-width: 580px;
+    max-width: 580px;
+  }
+  main .custom-phone .mensaje {
+    min-width: 580px;
+    max-width: 580px;
+  }
+  main .custom-phone .mensaje .texto-personalizado {
+    width: 195px;
+    height: 320px;
+    -webkit-transform: translate(320px, 310px);
+            transform: translate(320px, 310px);
+  }
+}
+
+main .custom-container {
+  background: #2c2c2c;
+  color: #F1FAEE;
+  padding: 50px 30px 100px;
+  position: relative;
+  z-index: 99999999;
+}
+
+main .custom-container h4, main .custom-container .h4 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+main .custom-container h3, main .custom-container .h3 {
+  color: #F1FAEE;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+main .custom-container .design .btn {
+  font-size: .8rem;
+}
+
+main .custom-container .design span {
+  font-size: .8rem;
+}
+
+main .custom-container #colores {
+  margin: 30px 0;
+}
+
+main .custom-container #colores span {
+  font-size: .7rem;
+}
+
+main .custom-container #colores input[type="color"] {
+  width: 50%;
+  padding: 0;
+  margin: 20px 10px;
+}
+
+main .custom-container #colores .color {
+  display: inline-block;
+  margin: 1px;
+}
+
+main .custom-container #colores .color .ref-color {
+  width: 50px;
+  height: 50px;
+  background-color: #FF0000;
+  cursor: pointer;
+}
+
+main .custom-container #colores .color .celeste {
+  background: #ADD8E6;
+}
+
+main .custom-container #colores .color .verde {
+  background: green;
+}
+
+main .custom-container #colores .color .azul {
+  background: blue;
+}
+
+main .custom-container #colores .color .rosa {
+  background: pink;
+}
+
+main .custom-container #colores .color .amarillo {
+  background: yellow;
+}
+
+main .custom-container #colores .color .naranja {
+  background: orange;
+}
+
+main .custom-container #textoPersonalizado input[type="text"] {
+  width: 75%;
+}
+
+main .custom-container #textoPersonalizado input[type="number"] {
+  width: 20%;
+  margin-left: 5px;
+}
+
+main .custom-container #textoPersonalizado input[type="color"] {
+  width: 55%;
+  margin: 10px 0;
+  position: relative;
+  z-index: 999999;
+}
+
+main .custom-container #textoPersonalizado .rango span {
+  font-size: .8rem;
+}
+
+main .custom-container .producto__boton {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  background: transparent;
+}
+
+main .custom-container .producto__boton a {
+  background: #E63946;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+main .custom-container .producto__boton a:hover {
+  color: #fff;
+}
+
+main .productosFinales .titulos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .productosFinales .titulos span {
+  font-weight: 700;
+}
+
+main .productosFinales table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 5px 10px;
+}
+
+main .productosFinales table td {
+  font-size: .8rem;
+}
+
+main .productosFinales table .td__nombre {
+  font-weight: 700;
+}
+
+main .productosFinales table .td__imagen {
+  width: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  main .productosFinales table td {
+    font-size: 1rem;
+  }
+  main .productosFinales table .td__imagen {
+    width: 150px;
+  }
+}
+
+main .productosFinales .total {
+  font-weight: 900;
+  font-size: 1.2rem;
+  float: right;
+  margin: 50px 0;
+}
+
+main .productosFinales .total span {
+  font-size: 1.3rem;
 }
 
 main .container .acercaDe {
@@ -1078,7 +1357,7 @@ main .container .contacto .row .tienda-info .titulo {
 
 main .container .contacto .row .tienda-info span {
   font-size: .9rem;
-  color: #414141;
+  color: #2c2c2c;
   font-family: "Poppins", sans-serif;
   margin: 5px 0;
 }
