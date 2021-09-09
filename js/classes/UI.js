@@ -75,7 +75,7 @@ class UI{
         const estadoCarrito = document.querySelector('#estadoCarrito');
         const vacioDiv = document.createElement('div');
         let urlFinalizarCompra;
-        if(window.location.pathname === '/index.html'){
+        if(window.location.pathname === '/index.html' || window.location.pathname === '/'){
             urlFinalizarCompra='./pages/finalizar-compra.html'
         }else{
             urlFinalizarCompra = './finalizar-compra.html'
