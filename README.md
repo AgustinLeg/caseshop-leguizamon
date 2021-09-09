@@ -1,4 +1,4 @@
 # caseshop-leguizamon
-Proyecto CoderHouse
-*instalar dependencias*
-[a link](https://leguizamon-caseshop.000webhostapp.com/)
+Proyecto CoderHouse\
+
+[CaseShop](https://leguizamon-caseshop.000webhostapp.com/)
