@@ -911,7 +911,7 @@ main .container #filtros .btn {
   max-width: 90px;
 }
 
-main .container #filtros .color .ref-color {
+main .container #filtros .color-filter .ref-color {
   width: 10px;
   height: 10px;
   background-color: #FF0000;
@@ -920,27 +920,27 @@ main .container #filtros .color .ref-color {
   border-radius: 50%;
 }
 
-main .container #filtros .color .celeste {
+main .container #filtros .color-filter .celeste {
   background: lightblue;
 }
 
-main .container #filtros .color .verde {
+main .container #filtros .color-filter .verde {
   background: green;
 }
 
-main .container #filtros .color .azul {
+main .container #filtros .color-filter .azul {
   background: blue;
 }
 
-main .container #filtros .color .rosa {
+main .container #filtros .color-filter .rosa {
   background: pink;
 }
 
-main .container #filtros .color .amarillo {
+main .container #filtros .color-filter .amarillo {
   background: yellow;
 }
 
-main .container #filtros .color .naranja {
+main .container #filtros .color-filter .naranja {
   background: orange;
 }
 
@@ -1016,6 +1016,7 @@ main .container .container__productos .producto span {
     display: -ms-flexbox;
     display: flex;
     position: relative;
+    max-width: 500px;
   }
 }
 

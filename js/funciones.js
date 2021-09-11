@@ -73,9 +73,10 @@ export function filtrarProductos(){
       ui.limpiarHTML(contenedor);
       datosBusqueda={
         categoria:$(".categorias input:radio:checked").val(),
-        color:$(".color input:radio:checked").val(),
+        color:$(".color-filter input:radio:checked").val(),
         modelo:$(".modelos input:radio:checked").val()
       }
+
       const resultado = producto.filtrar(productos, datosBusqueda)
       for(const producto of resultado){
         ui.productosUI(producto,contenedor)

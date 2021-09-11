@@ -36,7 +36,7 @@ main{
                 min-width: 90px;
                 max-width: 90px;
             }
-            .color{
+            .color-filter{
                 .ref-color{
                     width: 10px;
                     height: 10px;
@@ -112,6 +112,7 @@ main{
                 #filtros{
                     display: flex;
                     position: relative;
+                    max-width: 500px;
                 }
             }
         }

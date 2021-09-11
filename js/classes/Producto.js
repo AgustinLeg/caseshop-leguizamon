@@ -54,7 +54,6 @@ class Producto {
 
     filtrar(productos, filtros){
         this.filtro = filtros;
-        
         const resultado = productos.filter(producto => {
             const {categoria} = this.filtro
                 if(categoria === 'todos'){
