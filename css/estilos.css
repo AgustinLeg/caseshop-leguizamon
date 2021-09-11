@@ -897,6 +897,7 @@ main .container #filtros {
   position: absolute;
   z-index: 1;
   background: #fff;
+  width: 410px;
 }
 
 main .container #filtros h3, main .container #filtros .h3 {
